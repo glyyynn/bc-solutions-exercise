@@ -1,6 +1,6 @@
 # bc-solutions-exercise
 
-BigCommerce mircoservice for comparing product zip codes to customer zip codes. Only whitelisted for 'https://www.google.com' and 'https://shaman.com'.
+BigCommerce mircoservice for comparing product zip codes to customer zip codes. Currently this is only whitelisted for 'https://www.google.com' and 'https://shaman.com'.
 
 Only requires a CID - BigCommerce Customer ID value, and a PID - a product ID value.
 
