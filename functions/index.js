@@ -17,7 +17,7 @@ admin.initializeApp();
 app.use(helmet());
 app.use(bodyParser.json());
 app.use(morgan('combined'));
-var whitelist = ['https://www.google.com', 'https://shaman.com']
+var whitelist = ['https://www.google.com', 'https://shaman.cf']
 var corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
