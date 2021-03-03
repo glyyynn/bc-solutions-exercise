@@ -6,11 +6,10 @@ Only requires a CID - BigCommerce Customer ID value, and a PID - a product ID va
 
 Example:
 ``` javascript
-const productID = 153;
 const customerID = 15;
+const productID = 153;
 const endpoint = `https://us-central1-bc-transistor.cloudfunctions.net/app?CID=${customerID}&PID=${productID}`;
 
-fetch(endpoint)
-  .then(response => response.json())
+fetch(endpoint).then(response => response.json())
   .then(data => console.log(data));
 ```
