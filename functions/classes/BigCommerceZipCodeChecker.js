@@ -2,7 +2,7 @@
 const functions = require('firebase-functions'),
       fetch = require('node-fetch');
 
-const ACCESS_TOKEN = ''
+const ACCESS_TOKEN = 'q1nb007k9y1our3z9hfxjht4vqd167n'
 
 class ZipCodeChecker {
     constructor() {
@@ -27,13 +27,13 @@ class ZipCodeChecker {
                 } else if (matchedAddressesArray.length >= 2) {
                     return 'Success';
                 } else {
-                    throw 'Error - no matched arrays with multiple customer addresses';
+                    throw new Error('Error - no matched arrays with multiple customer addresses');
                 }
             } else {
-                throw 'Error - no customer addresses returned';
+                throw new Error('Error - no customer addresses returned');
             }
         } catch (e) {
-            return e;
+            return e.message;
         }
     }
 
@@ -43,7 +43,7 @@ class ZipCodeChecker {
             let currentZip = addressObject['zip'];
             return currentProductZipCodeArray.indexOf(currentZip) > -1;
         });
-
+        
         return { amountOfCustomerAddresses, matchedAddressesArray };
     }
 
